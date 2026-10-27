@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team Site · Quarterly Regulatory Filing</title>
+<style>
+  :root {
+    --navy: #0b2e4f;
+    --blue: #1f6feb;
+    --ink: #1d2733;
+    --muted: #5b6776;
+    --paper: #ffffff;
+    --tint: #f3f6fa;
+    --line: #d9e1ea;
+    --flag: #fff4c2;
+    --flag-ink: #6b5200;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --navy: #9cc7ff;
+      --blue: #6aa6ff;
+      --ink: #e6edf5;
+      --muted: #9aa8b8;
+      --paper: #121820;
+      --tint: #1a2330;
+      --line: #2a3644;
+      --flag: #3a3200;
+      --flag-ink: #ffe68a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --navy: #9cc7ff;
+    --blue: #6aa6ff;
+    --ink: #e6edf5;
+    --muted: #9aa8b8;
+    --paper: #121820;
+    --tint: #1a2330;
+    --line: #2a3644;
+    --flag: #3a3200;
+    --flag-ink: #ffe68a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+  header {
+    background: var(--navy);
+    color: #fff;
+    padding: 48px 0 40px;
+  }
+  header .eyebrow { opacity: .8; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; margin: 0; }
+  header h1 { margin: 6px 0 8px; font-size: clamp(28px, 5vw, 40px); line-height: 1.15; }
+  header .motto { margin: 0; font-size: 18px; opacity: .92; font-style: italic; }
+  nav { background: var(--tint); border-bottom: 1px solid var(--line); }
+  nav ul { list-style: none; margin: 0; padding: 12px 0; display: flex; gap: 20px; flex-wrap: wrap; }
+  nav a { color: var(--blue); text-decoration: none; font-weight: 600; font-size: 15px; }
+  nav a:hover { text-decoration: underline; }
+  section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type { border-bottom: none; }
+  h2 { color: var(--navy); font-size: 26px; margin: 0 0 6px; }
+  .lede { color: var(--muted); margin: 0 0 24px; }
+  .ph {
+    background: var(--flag);
+    color: var(--flag-ink);
+    padding: 0 4px;
+    border-radius: 3px;
+    font-weight: 600;
+  }
+  /* Team */
+  .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .card {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 20px;
+    background: var(--paper);
+  }
+  .card .name { font-size: 18px; font-weight: 700; margin: 0; }
+  .card .role { color: var(--blue); font-weight: 600; font-size: 14px; margin: 2px 0 10px; }
+  .card p { margin: 0; color: var(--ink); font-size: 15px; }
+  /* Problem */
+  .problem-facts {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-bottom: 20px;
+  }
+  .fact {
+    background: var(--tint);
+    border-left: 4px solid var(--blue);
+    border-radius: 6px;
+    padding: 14px 16px;
+  }
+  .fact .label { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 700; margin: 0 0 4px; }
+  .fact .value { margin: 0; font-size: 15px; }
+  .statement {
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--navy);
+    padding: 20px 24px;
+    border-radius: 6px;
+    font-size: 17px;
+    margin: 0 0 20px;
+  }
+  .statement h3 { margin: 0 0 8px; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+  .statement p { margin: 0; }
+  .constraint {
+    background: var(--tint);
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+  }
+  .constraint strong { color: var(--navy); }
+  .constraint p { margin: 4px 0 0; }
+  ul.tight { margin: 0; padding-left: 20px; }
+  ul.tight li { margin-bottom: 4px; }
+  footer { color: var(--muted); font-size: 13px; padding: 24px 0 40px; }
+  @media (max-width: 480px) {
+    .wrap { padding: 0 16px; }
+    section { padding: 36px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">MS Finance Challenge Lab · Mumbai</p>
+    <h1><span class="ph">[Team name]</span></h1>
+    <p class="motto">“Just Do it”</p>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <ul>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#problem">Problem statement</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <section id="team">
+    <div class="wrap">
+      <h2>Team</h2>
+      <p class="lede">Who we are and what each of us owns.</p>
+      <div class="grid">
+        <article class="card">
+          <p class="name">Vinkesh</p>
+          <p class="role">Data Architect</p>
+          <p><span class="ph">[Short bio: 1–2 sentences]</span></p>
+        </article>
+        <article class="card">
+          <p class="name"><span class="ph">[Member 2 name]</span></p>
+          <p class="role"><span class="ph">[Role]</span></p>
+          <p><span class="ph">[Short bio: 1–2 sentences]</span></p>
+        </article>
+        <article class="card">
+          <p class="name"><span class="ph">[Member 3 name]</span></p>
+          <p class="role"><span class="ph">[Role]</span></p>
+          <p><span class="ph">[Short bio: 1–2 sentences]</span></p>
+        </article>
+        <article class="card">
+          <p class="name"><span class="ph">[Member 4 name]</span></p>
+          <p class="role"><span class="ph">[Role]</span></p>
+          <p><span class="ph">[Short bio: 1–2 sentences]</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="problem">
+    <div class="wrap">
+      <h2>Problem statement</h2>
+      <p class="lede">Quarterly Regulatory Filing · Problem one-pager, Day 1</p>
+
+      <div class="problem-facts">
+        <div class="fact">
+          <p class="label">Who</p>
+          <p class="value">Regulatory reporting analysts who prepare the quarterly filing</p>
+        </div>
+        <div class="fact">
+          <p class="label">Pain</p>
+          <p class="value">Manual, deadline-pressured checking. A missed check or broken trace becomes a material misstatement.</p>
+        </div>
+        <div class="fact">
+          <p class="label">Cost &amp; frequency</p>
+          <p class="value">Every quarter · 12 days of preparer + reviewer effort per cycle</p>
+        </div>
+      </div>
+
+      <div class="statement">
+        <h3>Our one-sentence problem statement</h3>
+        <p>Our regulatory reporting analysts spend 12 days each quarter checking and tracing the quarterly filing because the numbers span many source feeds and every cell must tie to its source; an agent could pre-run the edit checks and trace each filed value back to its source row, flagging failures for a human to resolve and sign off before filing, using the RWA/capital feeds and the regulatory reporting instructions, cutting the check-and-trace effort to a focused review.</p>
+      </div>
+
+      <div class="constraint">
+        <strong>Hard constraint:</strong>
+        <p>A human must sign off before filing. AI may pre-validate and trace, but cannot autonomously file.</p>
+      </div>
+
+      <h3 style="color:var(--navy);margin:0 0 8px;font-size:18px;">Current tools and systems</h3>
+      <ul class="tight">
+        <li>RWA feeds (credit, market, op-risk)</li>
+        <li>Capital / HC-R source rows</li>
+        <li>Schedule and cell workbook (RC-R, HC-R)</li>
+        <li>Regulatory reporting instructions</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<div class="wrap">
+  <footer>Highlighted fields are placeholders to fill in before the presentation.</footer>
+</div>
+
+</body>
+</html>
